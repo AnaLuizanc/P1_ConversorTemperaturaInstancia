@@ -7,6 +7,11 @@ package br.edu.ifnmg.poo.conversortemperaturainstancia;
 public class Converte {
     private double valor;
     private String unidade;
+
+    public Converte() {
+    }
+    
+    
     
     
 }
