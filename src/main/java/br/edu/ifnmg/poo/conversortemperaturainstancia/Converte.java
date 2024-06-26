@@ -6,28 +6,21 @@ package br.edu.ifnmg.poo.conversortemperaturainstancia;
  */
 public class Converte {
 
-    private double valor;
-    private String unidade;
+    private double temperatura;
 
     public Converte() {
     }
 
     //<editor-fold defaultstate="collapsed" desc="Getters/Setters">
-    public double getValor() {
-        return valor;
+    public double getTemperatura() {
+        return temperatura;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    public void setTemperatura(double temperatura) {
+        this.temperatura = temperatura;
     }
 
-    public String getUnidade() {
-        return unidade;
-    }
-
-    public void setUnidade(String unidade) {
-        this.unidade = unidade;
-    }
 //</editor-fold>
-
+    
+    
 }
