@@ -21,6 +21,21 @@ public class Converte {
     }
 
 //</editor-fold>
-    
+    public double converteCelsiusParaKelvin() {
+        if (temperatura < -273.15) {
+
+            //dispara excecao "Valor da temperatura abaixo do zero absoluto"
+            System.err.println("Valor da temperatura abaixo do zero absoluto");
+        } else {
+            double resultado = temperatura + 273.15;
+            if (resultado < -273.15) {
+                // dispara excecao "Valor convertido para abaixo do zero absoluto"
+                System.err.println("Valor convertido para abaixo do zero absoluto");
+            } else {
+                return resultado;
+            }
+        }
+        return 0;
+    }
     
 }
