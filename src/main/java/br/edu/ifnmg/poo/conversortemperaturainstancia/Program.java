@@ -7,6 +7,13 @@ package br.edu.ifnmg.poo.conversortemperaturainstancia;
 public class Program {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Converte temperatura = new Converte();
+        
+        temperatura.setTemperatura(21.0);
+        System.out.println(">> Resultado: " + temperatura.converteCelsiusParaKelvin());
+        
+        temperatura.setTemperatura(-280.0);
+        System.out.println(">> Resultado: " + temperatura.converteCelsiusParaKelvin());
+        
     }
 }
