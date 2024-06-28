@@ -7,14 +7,30 @@ package br.edu.ifnmg.poo.conversortemperaturainstancia;
 public class Program {
 
     public static void main(String[] args) {
-        Converte temperatura = new Converte();
-        
-        temperatura.setTemperatura(21.0);
-        System.out.println(">> Resultado: " + temperatura.converteCelsiusParaKelvin());
-        
-        temperatura.setTemperatura(-280.0);
-        System.out.println(">> Resultado: " + temperatura.converteCelsiusParaKelvin());
-        
-        
+        Temperatura temperatura = new Temperatura();
+
+        try {
+            temperatura.setTemperatura(21.0);
+            System.out.println(">> Resultado: " + temperatura.converteCelsiusParaKelvin() + " K");
+        } catch (TemperaturaInvalidaException e) {
+            System.out.println("ERRO: " + e.getMessage());
+        }
+
+        try {
+            temperatura.setTemperatura(-280.0);
+            System.out.println(">> Resultado: " + temperatura.converteCelsiusParaKelvin() + " K");
+
+        } catch (TemperaturaInvalidaException e) {
+            System.out.println("ERRO: " + e.getMessage());
+        }
+
+        try {
+            temperatura.setTemperatura(26.0);
+            System.out.println(">> Resultado: " + temperatura.converteCelsiusParaKelvin() + " K");
+
+        } catch (TemperaturaInvalidaException e) {
+            System.out.println("ERRO: " + e.getMessage());
+        }
+
     }
 }
