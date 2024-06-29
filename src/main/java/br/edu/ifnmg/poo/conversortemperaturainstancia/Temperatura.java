@@ -28,5 +28,13 @@ public class Temperatura {
             return temperatura + 273.15;
         }
     }
+    
+    public double converteCelsiusParaFahrenheit() throws TemperaturaInvalidaException{
+        if(temperatura < -273.15){
+            throw  new TemperaturaInvalidaException("Valor da temperatura abaixo do zero absoluto");
+        }else{
+            return (temperatura * (9.0/5)) + 32;
+        }
+    }
 
 }
