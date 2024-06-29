@@ -53,4 +53,12 @@ public class Temperatura {
         }
     }
 
+    public double converteFahrenheitParaCelsius() throws TemperaturaInvalidaException {
+        if (temperatura < -459.67) {
+            throw new TemperaturaInvalidaException("Valor da temperatura abaixo do zero absoluto");
+        } else {
+            return (5 * temperatura - 160) / 9.0;
+        }
+    }
+
 }
