@@ -9,6 +9,8 @@ public class Program {
     public static void main(String[] args) {
         Temperatura temperatura = new Temperatura();
 
+        System.out.println("CELSIUS -> KELVIN");
+        
         //<editor-fold defaultstate="collapsed" desc="Testes de conversão de Celsius para Kelvin">
         try {
             temperatura.setTemperatura(21.0);
@@ -34,10 +36,11 @@ public class Program {
         }
 
 //</editor-fold>
+        
+        System.out.println("CELSIUS -> FAHRENHEIT ");
 
-//<editor-fold defaultstate="collapsed" desc="Testes de conversão de Celsius para Fahrenheit">
-
-    try {
+        //<editor-fold defaultstate="collapsed" desc="Testes de conversão de Celsius para Fahrenheit">
+        try {
             temperatura.setTemperatura(22.0);
             System.out.println(">> Resultado: " + temperatura.converteCelsiusParaFahrenheit() + " °F");
         } catch (TemperaturaInvalidaException e) {
@@ -55,6 +58,34 @@ public class Program {
         try {
             temperatura.setTemperatura(32.7);
             System.out.println(">> Resultado: " + temperatura.converteCelsiusParaFahrenheit() + " °F");
+
+        } catch (TemperaturaInvalidaException e) {
+            System.out.println("ERRO: " + e.getMessage());
+        }
+
+//</editor-fold>
+
+        System.out.println("KELVIN -> CELSIUS");
+
+        //<editor-fold defaultstate="collapsed" desc="Testes de conversão de Kelvin para Celsius">
+        try {
+            temperatura.setTemperatura(25.0);
+            System.out.println(">> Resultado: " + temperatura.converteKelvinParaCelsius()+ " °C");
+        } catch (TemperaturaInvalidaException e) {
+            System.out.println("ERRO: " + e.getMessage());
+        }
+
+        try {
+            temperatura.setTemperatura(-12.0);
+            System.out.println(">> Resultado: " + temperatura.converteKelvinParaCelsius()+ " °C");
+
+        } catch (TemperaturaInvalidaException e) {
+            System.out.println("ERRO: " + e.getMessage());
+        }
+
+        try {
+            temperatura.setTemperatura(350.0);
+            System.out.println(">> Resultado: " + temperatura.converteKelvinParaCelsius()+ " °C");
 
         } catch (TemperaturaInvalidaException e) {
             System.out.println("ERRO: " + e.getMessage());
