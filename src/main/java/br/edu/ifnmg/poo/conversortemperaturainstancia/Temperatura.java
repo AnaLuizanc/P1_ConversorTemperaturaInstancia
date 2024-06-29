@@ -36,5 +36,13 @@ public class Temperatura {
             return (temperatura * (9.0/5)) + 32;
         }
     }
+    
+    public double converteKelvinParaCelsius() throws TemperaturaInvalidaException{
+        if(temperatura < 0){
+            throw  new TemperaturaInvalidaException("Valor da temperatura abaixo do zero absoluto");
+        }else{
+            return temperatura - 273.15;            
+        }
+    }
 
 }
