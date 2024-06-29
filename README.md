@@ -1,6 +1,6 @@
 # P1_ConversorTemperaturaInstancia
 O objetivo é planejar, construir e testar uma classe capaz de realizar conversões de temperatura entre as
-unidades Kelvin, Celsius e Farenheit.
+unidades Kelvin, Celsius e Fahrenheit.
 
 ## Requisitos
 A classe deve usar membros de instância. Um atributo deve manter o valor absoluto da unidade de
