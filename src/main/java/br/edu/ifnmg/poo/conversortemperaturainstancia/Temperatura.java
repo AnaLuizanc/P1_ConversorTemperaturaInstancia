@@ -21,7 +21,7 @@ public class Temperatura {
     
     public double converterCelsiusParaKelvin() throws TemperaturaInvalidaException {
         if (temperatura < -273.15) {
-            throw new TemperaturaInvalidaException("Valor da temperatura abaixo do zero absoluto");
+            throw new TemperaturaInvalidaException();
         } else {
             return temperatura + 273.15;
         }
@@ -29,7 +29,7 @@ public class Temperatura {
 
     public double converterCelsiusParaFahrenheit() throws TemperaturaInvalidaException {
         if (temperatura < -273.15) {
-            throw new TemperaturaInvalidaException("Valor da temperatura abaixo do zero absoluto");
+            throw new TemperaturaInvalidaException();
         } else {
             return (temperatura * (9.0 / 5)) + 32;
         }
@@ -37,7 +37,7 @@ public class Temperatura {
 
     public double converterKelvinParaCelsius() throws TemperaturaInvalidaException {
         if (temperatura < 0) {
-            throw new TemperaturaInvalidaException("Valor da temperatura abaixo do zero absoluto");
+            throw new TemperaturaInvalidaException();
         } else {
             return temperatura - 273.15;
         }
@@ -45,7 +45,7 @@ public class Temperatura {
 
     public double converterKelvinParaFahrenheit() throws TemperaturaInvalidaException {
         if (temperatura < 0) {
-            throw new TemperaturaInvalidaException("Valor da temperatura abaixo do zero absoluto");
+            throw new TemperaturaInvalidaException();
         } else {
             return (temperatura * 9.0 / 5) - 459.67;
         }
@@ -53,7 +53,7 @@ public class Temperatura {
 
     public double converterFahrenheitParaCelsius() throws TemperaturaInvalidaException {
         if (temperatura < -459.67) {
-            throw new TemperaturaInvalidaException("Valor da temperatura abaixo do zero absoluto");
+            throw new TemperaturaInvalidaException();
         } else {
             return (5 * temperatura - 160) / 9.0;
         }
@@ -61,7 +61,7 @@ public class Temperatura {
 
     public double converterFahrenheitParaKelvin() throws TemperaturaInvalidaException {
         if (temperatura < -459.67) {
-            throw new TemperaturaInvalidaException("Valor da temperatura abaixo do zero absoluto");
+            throw new TemperaturaInvalidaException();
         } else {
             return 5.0 / 9 * (temperatura + 459.67);
         }

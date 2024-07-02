@@ -6,7 +6,7 @@ package br.edu.ifnmg.poo.conversortemperaturainstancia;
  */
 public class TemperaturaInvalidaException extends Exception {
     
-    public TemperaturaInvalidaException(String mensagem) {
-        super(mensagem);
+    public TemperaturaInvalidaException() {
+        super("Valor da temperatura abaixo do zero absoluto");
     }
 }
