@@ -2,7 +2,7 @@ package br.edu.ifnmg.poo.conversortemperaturainstancia;
 
 /**
  *
- * @author analu
+ * @author AnaLuizanc
  */
 public class Temperatura {
 
